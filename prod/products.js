@@ -44,7 +44,7 @@ function generateView(product) {
     html += '<div class="u-container-style u-grey-10 u-group u-group-1">';
     html += '<div class="u-container-layout u-container-layout-2">';
     html += '<h4 class="u-align-left u-product-control u-text u-text-3">';
-    html += '<a title="remove this" class="u-product-title-link">' + product.name + '</a>';
+    html += '<a title="' + product.name + '" class="u-product-title-link">' + product.name + '</a>';
     html += '</h4>';
     html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">' + product.company + '</div>';
     html += '<div class="u-align-left u-product-control u-product-price u-product-price-1">';
