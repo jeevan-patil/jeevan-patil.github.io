@@ -69,7 +69,7 @@ var products = [
         "desc": "",
         "price": "",
         "unit": "Unit",
-        "image": "adama-products.png",
+        "image": "2-4-d-adama.jpeg",
         "search_term": "2-4-d 1l main adama india ltdherbicide"
     },
     {
@@ -91,7 +91,7 @@ var products = [
         "desc": "",
         "price": "",
         "unit": "Unit",
-        "image": "atul-products.png",
+        "image": "2-4-d-atul.jpeg",
         "search_term": "2-4-d 1l zuaraatul ltdherbicide"
     },
     {
@@ -102,7 +102,7 @@ var products = [
         "desc": "",
         "price": "",
         "unit": "Unit",
-        "image": "atul-products.png",
+        "image": "2-4-d-atul.jpeg",
         "search_term": "2-4-d  1 l zura atul ltdherbicide"
     },
     {
@@ -113,7 +113,7 @@ var products = [
         "desc": "",
         "price": "",
         "unit": "Unit",
-        "image": "adama-products.png",
+        "image": "2-4-d-adama.jpeg",
         "search_term": "2-4-d 250ml main adama  india ltdherbicide"
     },
     {
@@ -124,7 +124,7 @@ var products = [
         "desc": "",
         "price": "",
         "unit": "Unit",
-        "image": "atul-products.png",
+        "image": "2-4-d-atul.jpeg",
         "search_term": "2.4.d 250 ml zura  atul ltdherbicide"
     },
     {
@@ -135,7 +135,7 @@ var products = [
         "desc": "",
         "price": "",
         "unit": "Unit",
-        "image": "adama-products.png",
+        "image": "2-4-d-adama.jpeg",
         "search_term": "2-4-d 400ml main adama  india ltdherbicide"
     },
     {
@@ -146,7 +146,7 @@ var products = [
         "desc": "",
         "price": "",
         "unit": "Unit",
-        "image": "atul-products.png",
+        "image": "2-4-d-atul.jpeg",
         "search_term": "2.4d 500 gram powder salixatul ltdherbicide"
     },
     {
