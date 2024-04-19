@@ -37,6 +37,10 @@ function searchProducts() {
 }
 
 function generateView(product) {
+    var stock = product.stock;
+
+
+
     var html = "";
     html += '<div class="u-align-center u-container-style u-products-item u-repeater-item">';
     html += '<div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">';
@@ -49,8 +53,14 @@ function generateView(product) {
     html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">' + product.company + '</div>';
     //html += '<div class="u-align-left u-product-control u-product-price u-product-price-1">';
     //html += '<div class="u-price-wrapper u-spacing-10">';
-    html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">Credit price: ' + product.credit_price + ' / ' + product.unit + '</div>';
-    html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">Cash price: ' + product.cash_price + ' / ' + product.unit + '</div>';
+
+    if(stock && stock == 'yes') {
+        html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4" style="color: green;">Stock available</div>';
+    } else if(stock && stock == 'no') {
+        html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4" style="color: red;">Out of stock</div>';
+    }
+
+    html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">Price: ' + product.cash_price + ' / ' + product.unit + '</div>';
     //html += '</div>';
    //html += '</div>';
     html += '</div>';
@@ -67,7 +77,8 @@ var products = [
         "company": "ADAMA INDIA LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "cash_price": "",
+        "stock": "yes",
+        "cash_price": "34",
         "credit_price": "",
         "unit": "Unit",
         "image": "2-4-d-adama.jpeg",
@@ -79,6 +90,7 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "HERBICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -91,6 +103,7 @@ var products = [
         "company": "ATUL LTD",
         "category": "HERBICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -103,6 +116,7 @@ var products = [
         "company": "ATUL LTD",
         "category": "HERBICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -115,6 +129,7 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "HERBICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -127,6 +142,7 @@ var products = [
         "company": "ATUL LTD",
         "category": "HERBICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -139,6 +155,7 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "HERBICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -151,6 +168,7 @@ var products = [
         "company": "ATUL LTD",
         "category": "HERBICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -163,6 +181,7 @@ var products = [
         "company": "GODREJ AGROTECH LTD",
         "category": "HERBICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -175,6 +194,7 @@ var products = [
         "company": "SYNGENTA LTD",
         "category": "HERBICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -187,6 +207,7 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "PESTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -199,6 +220,7 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "PESTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -211,6 +233,7 @@ var products = [
         "company": "SYNGENTA LTD",
         "category": "INSECTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -223,6 +246,7 @@ var products = [
         "company": "SYNGENTA LTD",
         "category": "INSECTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -235,6 +259,7 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "INSECTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -247,6 +272,7 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "INSECTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -259,6 +285,7 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "INSECTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -271,6 +298,7 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "INSECTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -283,6 +311,7 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "INSECTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -295,6 +324,7 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "INSECTICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -307,6 +337,7 @@ var products = [
         "company": "BAYER LTD",
         "category": "FUNGICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -319,6 +350,7 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "FUNGICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -331,6 +363,7 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "FUNGICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
@@ -343,6 +376,7 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "FUNGICIDE",
         "desc": "",
+        "stock": "yes",
         "cash_price": "",
         "credit_price": "",
         "unit": "Unit",
