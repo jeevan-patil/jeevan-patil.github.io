@@ -1,0 +1,42 @@
+[
+    {
+        "code" : "",
+        "name" : "Green India",
+        "desc" : "Green India organic fertilizer",
+        "price" : "123",
+        "unit" : "kg",
+        "image" : "images/green-india.jpeg",
+        "category" : "",
+        "search_term" : ["green", "india", "urea"]
+    },
+    {
+        "code" : "",
+        "name" : "CALSIPHOS",
+        "desc" : "Bio NPK fertilizers",
+        "price" : "12.33",
+        "unit" : "ltr",
+        "image" : "images/npk.png",
+        "category" : "",
+        "search_term" : ["CALSIPHOS", "npk", "bio"]
+    },
+    {
+        "code" : "",
+        "name" : "UREA",
+        "desc" : "UREA",
+        "price" : "15.25",
+        "unit" : "kg",
+        "image" : "images/urea.png",
+        "category" : "",
+        "search_term" : ["urea"]
+    },
+    {
+        "code" : "",
+        "name" : "PANCHSHEEL",
+        "desc" : "Liquid Micronutrient Fertilizer",
+        "price" : "25.54",
+        "unit" : "ltr",
+        "image" : "images/green-india.jpeg",
+        "category" : "",
+        "search_term" : ["PANCHSHEEL", "Micronutrient", "Liquid", "Fertilizer"]
+    }
+]
