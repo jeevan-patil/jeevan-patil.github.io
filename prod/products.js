@@ -46,7 +46,7 @@ function generateView(product) {
     html += '<h4 class="u-align-left u-product-control u-text u-text-3">';
     html += '<a title="remove this" class="u-product-title-link">' + product.name + '</a>';
     html += '</h4>';
-    html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">' + product.desc + '</div>';
+    html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">' + product.company + '</div>';
     html += '<div class="u-align-left u-product-control u-product-price u-product-price-1">';
     html += '<div class="u-price-wrapper u-spacing-10">';
     html += '<div class="u-hide-price u-old-price"></div>';
@@ -62,43 +62,267 @@ function generateView(product) {
 
 var products = [
     {
-        "code" : "0001",
-        "name" : "Green India",
-        "desc" : "Green India organic fertilizer",
-        "price" : "123",
-        "unit" : "kg",
-        "image" : "green-india.jpeg",
-        "category" : "",
-        "search_term" : "green india urea"
+        "code": "M00001",
+        "name": "2-4-D 1L MAIN",
+        "company": "ADAMA INDIA LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "2-4-d 1l main adama india ltdherbicide"
     },
     {
-        "code" : "0002",
-        "name" : "CALSIPHOS",
-        "desc" : "Bio NPK fertilizers",
-        "price" : "12.33",
-        "unit" : "ltr",
-        "image" : "npk.png",
-        "category" : "",
-        "search_term" : "calsiphos npk bio"
+        "code": "M00002",
+        "name": "2-4-D  1LTR",
+        "company": "KRISHI RASAYAN P.LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "krishi-rasayan.png",
+        "search_term": "2-4-d  1ltrkrishi rasayan p.ltdherbicide"
     },
     {
-        "code" : "0003",
-        "name" : "UREA",
-        "desc" : "UREA",
-        "price" : "15.25",
-        "unit" : "kg",
-        "image" : "urea.png",
-        "category" : "",
-        "search_term" : "urea"
+        "code": "M00003",
+        "name": "2-4-D 1L ZUARA",
+        "company": "ATUL LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "atul-products.png",
+        "search_term": "2-4-d 1l zuaraatul ltdherbicide"
     },
     {
-        "code" : "0004",
-        "name" : "PANCHSHEEL",
-        "desc" : "Liquid Micronutrient Fertilizer",
-        "price" : "25.54",
-        "unit" : "ltr",
-        "image" : "green-india.jpeg",
-        "category" : "",
-        "search_term" : "panchsheel micronutrient liquid fertilizer"
+        "code": "M00004",
+        "name": "2-4-D  1 L ZURA ",
+        "company": "ATUL LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "atul-products.png",
+        "search_term": "2-4-d  1 l zura atul ltdherbicide"
+    },
+    {
+        "code": "M00005",
+        "name": "2-4-D 250ML MAIN ",
+        "company": "ADAMA  INDIA LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "2-4-d 250ml main adama  india ltdherbicide"
+    },
+    {
+        "code": "M00006",
+        "name": "2.4.D 250 ML ZURA  ",
+        "company": "ATUL LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "atul-products.png",
+        "search_term": "2.4.d 250 ml zura  atul ltdherbicide"
+    },
+    {
+        "code": "M00007",
+        "name": "2-4-D 400ML MAIN ",
+        "company": "ADAMA  INDIA LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "2-4-d 400ml main adama  india ltdherbicide"
+    },
+    {
+        "code": "M00008",
+        "name": "2.4D 500 GRAM POWDER SALIX",
+        "company": "ATUL LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "atul-products.png",
+        "search_term": "2.4d 500 gram powder salixatul ltdherbicide"
+    },
+    {
+        "code": "M00009",
+        "name": "2-4-D 500ML ",
+        "company": "GODREJ AGROTECH LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "godrej-products.png",
+        "search_term": "2-4-d 500ml godrej agrotech ltdherbicide"
+    },
+    {
+        "code": "M00010",
+        "name": "ADRINO 100 GM ",
+        "company": "SYNGENTA LTD",
+        "category": "HERBICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "syngenta-products.png",
+        "search_term": "adrino 100 gm syngenta ltdherbicide"
+    },
+    {
+        "code": "M00011",
+        "name": "AGADI 1KG",
+        "company": "ADAMA  INDIA LTD",
+        "category": "PESTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "agadi 1kgadama  india ltdpesticide"
+    },
+    {
+        "code": "M00012",
+        "name": "AGADI 5KG",
+        "company": "ADAMA  INDIA LTD",
+        "category": "PESTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "agadi 5kgadama  india ltdpesticide"
+    },
+    {
+        "code": "M00013",
+        "name": "ALIKA 100ML ",
+        "company": "SYNGENTA LTD",
+        "category": "INSECTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "syngenta-products.png",
+        "search_term": "alika 100ml syngenta ltdinsecticide"
+    },
+    {
+        "code": "M00014",
+        "name": "ALIKA 40 ML",
+        "company": "SYNGENTA LTD",
+        "category": "INSECTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "syngenta-products.png",
+        "search_term": "alika 40 mlsyngenta ltdinsecticide"
+    },
+    {
+        "code": "M00015",
+        "name": "AMNON 100GM",
+        "company": "ADAMA  INDIA LTD",
+        "category": "INSECTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "amnon 100gmadama  india ltdinsecticide"
+    },
+    {
+        "code": "M00016",
+        "name": "AMNON 50 GM.",
+        "company": "ADAMA  INDIA LTD",
+        "category": "INSECTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "amnon 50 gm.adama  india ltdinsecticide"
+    },
+    {
+        "code": "M00017",
+        "name": "ANTH-50 250 ML [CHLOROPYRIPHOS 50%EC]",
+        "company": "KRISHI RASAYAN P.LTD",
+        "category": "INSECTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "krishi-rasayan.png",
+        "search_term": "anth-50 250 ml [chloropyriphos 50%ec]krishi rasayan p.ltdinsecticide"
+    },
+    {
+        "code": "M00018",
+        "name": "ANTH-50 500ML[CHLOROPYRIPHOS 50% EC]",
+        "company": "KRISHI RASAYAN P.LTD",
+        "category": "INSECTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "krishi-rasayan.png",
+        "search_term": "anth-50 500ml[chloropyriphos 50% ec]krishi rasayan p.ltdinsecticide"
+    },
+    {
+        "code": "M00019",
+        "name": "Anth-505 100 Ml (Chloropyriphos 50% Ec)",
+        "company": "KRISHI RASAYAN P.LTD",
+        "category": "INSECTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "krishi-rasayan.png",
+        "search_term": "anth-505 100 ml (chloropyriphos 50% ec)krishi rasayan p.ltdinsecticide"
+    },
+    {
+        "code": "M00020",
+        "name": "ANTH 505 1LTR (CHORO50% + CYPER 5%)",
+        "company": "KRISHI RASAYAN P.LTD",
+        "category": "INSECTICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "krishi-rasayan.png",
+        "search_term": "anth 505 1ltr (choro50% + cyper 5%)krishi rasayan p.ltdinsecticide"
+    },
+    {
+        "code": "M00021",
+        "name": "ANTRACOL 100GM",
+        "company": "BAYER LTD",
+        "category": "FUNGICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "bayer-products.png",
+        "search_term": "antracol 100gmbayer ltdfungicide"
+    },
+    {
+        "code": "M00022",
+        "name": "BENMAIN 100GM",
+        "company": "ADAMA  INDIA LTD",
+        "category": "FUNGICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "benmain 100gmadama  india ltdfungicide"
+    },
+    {
+        "code": "M00023",
+        "name": "BENMAIN 250GM",
+        "company": "ADAMA  INDIA LTD",
+        "category": "FUNGICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "benmain 250gmadama  india ltdfungicide"
+    },
+    {
+        "code": "M00024",
+        "name": "BENMAIN 500 GRM",
+        "company": "ADAMA  INDIA LTD",
+        "category": "FUNGICIDE",
+        "desc": "",
+        "price": "",
+        "unit": "Unit",
+        "image": "adama-products.png",
+        "search_term": "benmain 500 grmadama  india ltdfungicide"
     }
 ];
