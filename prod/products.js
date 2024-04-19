@@ -1,16 +1,39 @@
 
 $(document).ready(function () {
-    renderProducts();
+    renderProducts(products);
+
+    $('#search-box').keyup(function () { 
+        searchProducts();
+    });
 });
 
-
-
-function renderProducts() {
-    for (var i = 0; i < products.length; i++){
-        var product = products[i];
+function renderProducts(items) {
+    $("#products-div").html('');
+    $.each(items, function(i, product) {
         var prodHtml = generateView(product);
         $("#products-div").append(prodHtml);
-      }
+    });
+}
+
+function searchProducts() {
+    var term = $('#search-box').val().toLowerCase().trim();
+    
+    var searched = [];
+    if(term && term.length >= 3) {
+        $.each(products, function(i, product) {
+            if(product.name.search(term) != -1
+            || product.desc.search(term) != -1
+            || product.search_term.search(term) != -1) {
+                searched.push(product);
+            }
+        });
+
+        if(searched.length > 0) {
+            renderProducts(searched);
+        }
+    } else if(!term) {
+        renderProducts(products);
+    }
 }
 
 function generateView(product) {
@@ -39,43 +62,43 @@ function generateView(product) {
 
 var products = [
     {
-        "code" : "",
+        "code" : "0001",
         "name" : "Green India",
         "desc" : "Green India organic fertilizer",
         "price" : "123",
         "unit" : "kg",
         "image" : "green-india.jpeg",
         "category" : "",
-        "search_term" : ["green", "india", "urea"]
+        "search_term" : "green india urea"
     },
     {
-        "code" : "",
+        "code" : "0002",
         "name" : "CALSIPHOS",
         "desc" : "Bio NPK fertilizers",
         "price" : "12.33",
         "unit" : "ltr",
         "image" : "npk.png",
         "category" : "",
-        "search_term" : ["CALSIPHOS", "npk", "bio"]
+        "search_term" : "calsiphos npk bio"
     },
     {
-        "code" : "",
+        "code" : "0003",
         "name" : "UREA",
         "desc" : "UREA",
         "price" : "15.25",
         "unit" : "kg",
         "image" : "urea.png",
         "category" : "",
-        "search_term" : ["urea"]
+        "search_term" : "urea"
     },
     {
-        "code" : "",
+        "code" : "0004",
         "name" : "PANCHSHEEL",
         "desc" : "Liquid Micronutrient Fertilizer",
         "price" : "25.54",
         "unit" : "ltr",
         "image" : "green-india.jpeg",
         "category" : "",
-        "search_term" : ["PANCHSHEEL", "Micronutrient", "Liquid", "Fertilizer"]
+        "search_term" : "panchsheel micronutrient liquid fertilizer"
     }
 ];
