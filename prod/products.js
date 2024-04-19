@@ -47,12 +47,12 @@ function generateView(product) {
     html += '<a title="' + product.name + '" class="u-product-title-link">' + product.name + '</a>';
     html += '</h4>';
     html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">' + product.company + '</div>';
-    html += '<div class="u-align-left u-product-control u-product-price u-product-price-1">';
-    html += '<div class="u-price-wrapper u-spacing-10">';
-    html += '<div class="u-hide-price u-old-price"></div>';
-    html += '<div class="u-price u-text-palette-3-base" style="font-weight: 100;margin-left: 0px;">' + product.price + ' / ' + product.unit + '</div>';
-    html += '</div>';
-    html += '</div>';
+    //html += '<div class="u-align-left u-product-control u-product-price u-product-price-1">';
+    //html += '<div class="u-price-wrapper u-spacing-10">';
+    html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">Credit price: ' + product.credit_price + ' / ' + product.unit + '</div>';
+    html += '<div class="u-align-left u-product-control u-product-desc u-text u-text-4">Cash price: ' + product.cash_price + ' / ' + product.unit + '</div>';
+    //html += '</div>';
+   //html += '</div>';
     html += '</div>';
     html += '</div>';
     html += '</div>';
@@ -67,7 +67,8 @@ var products = [
         "company": "ADAMA INDIA LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "2-4-d-adama.jpeg",
         "search_term": "2-4-d 1l main adama india ltdherbicide"
@@ -78,7 +79,8 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "krishi-rasayan.png",
         "search_term": "2-4-d  1ltrkrishi rasayan p.ltdherbicide"
@@ -89,7 +91,8 @@ var products = [
         "company": "ATUL LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "2-4-d-atul.jpeg",
         "search_term": "2-4-d 1l zuaraatul ltdherbicide"
@@ -100,7 +103,8 @@ var products = [
         "company": "ATUL LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "2-4-d-atul.jpeg",
         "search_term": "2-4-d  1 l zura atul ltdherbicide"
@@ -111,7 +115,8 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "2-4-d-adama.jpeg",
         "search_term": "2-4-d 250ml main adama  india ltdherbicide"
@@ -122,7 +127,8 @@ var products = [
         "company": "ATUL LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "2-4-d-atul.jpeg",
         "search_term": "2.4.d 250 ml zura  atul ltdherbicide"
@@ -133,7 +139,8 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "2-4-d-adama.jpeg",
         "search_term": "2-4-d 400ml main adama  india ltdherbicide"
@@ -144,7 +151,8 @@ var products = [
         "company": "ATUL LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "2-4-d-atul.jpeg",
         "search_term": "2.4d 500 gram powder salixatul ltdherbicide"
@@ -155,7 +163,8 @@ var products = [
         "company": "GODREJ AGROTECH LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "godrej-products.png",
         "search_term": "2-4-d 500ml godrej agrotech ltdherbicide"
@@ -166,7 +175,8 @@ var products = [
         "company": "SYNGENTA LTD",
         "category": "HERBICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "syngenta-products.png",
         "search_term": "adrino 100 gm syngenta ltdherbicide"
@@ -177,7 +187,8 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "PESTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "adama-products.png",
         "search_term": "agadi 1kgadama  india ltdpesticide"
@@ -188,7 +199,8 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "PESTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "adama-products.png",
         "search_term": "agadi 5kgadama  india ltdpesticide"
@@ -199,7 +211,8 @@ var products = [
         "company": "SYNGENTA LTD",
         "category": "INSECTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "syngenta-products.png",
         "search_term": "alika 100ml syngenta ltdinsecticide"
@@ -210,7 +223,8 @@ var products = [
         "company": "SYNGENTA LTD",
         "category": "INSECTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "syngenta-products.png",
         "search_term": "alika 40 mlsyngenta ltdinsecticide"
@@ -221,7 +235,8 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "INSECTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "adama-products.png",
         "search_term": "amnon 100gmadama  india ltdinsecticide"
@@ -232,7 +247,8 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "INSECTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "adama-products.png",
         "search_term": "amnon 50 gm.adama  india ltdinsecticide"
@@ -243,7 +259,8 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "INSECTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "krishi-rasayan.png",
         "search_term": "anth-50 250 ml [chloropyriphos 50%ec]krishi rasayan p.ltdinsecticide"
@@ -254,7 +271,8 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "INSECTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "krishi-rasayan.png",
         "search_term": "anth-50 500ml[chloropyriphos 50% ec]krishi rasayan p.ltdinsecticide"
@@ -265,7 +283,8 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "INSECTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "krishi-rasayan.png",
         "search_term": "anth-505 100 ml (chloropyriphos 50% ec)krishi rasayan p.ltdinsecticide"
@@ -276,7 +295,8 @@ var products = [
         "company": "KRISHI RASAYAN P.LTD",
         "category": "INSECTICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "krishi-rasayan.png",
         "search_term": "anth 505 1ltr (choro50% + cyper 5%)krishi rasayan p.ltdinsecticide"
@@ -287,7 +307,8 @@ var products = [
         "company": "BAYER LTD",
         "category": "FUNGICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "bayer-products.png",
         "search_term": "antracol 100gmbayer ltdfungicide"
@@ -298,7 +319,8 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "FUNGICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "adama-products.png",
         "search_term": "benmain 100gmadama  india ltdfungicide"
@@ -309,7 +331,8 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "FUNGICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "adama-products.png",
         "search_term": "benmain 250gmadama  india ltdfungicide"
@@ -320,7 +343,8 @@ var products = [
         "company": "ADAMA  INDIA LTD",
         "category": "FUNGICIDE",
         "desc": "",
-        "price": "",
+        "cash_price": "",
+        "credit_price": "",
         "unit": "Unit",
         "image": "adama-products.png",
         "search_term": "benmain 500 grmadama  india ltdfungicide"
